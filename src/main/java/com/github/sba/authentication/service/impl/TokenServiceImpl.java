@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.github.sba.authentication.Token;
@@ -16,9 +17,14 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Service
 public class TokenServiceImpl implements TokenService {
 
-	private Integer expirationTime = 600;
-	private String key = "AAbb00asd--**";
-	private String tokenPrefix = "Bearer";
+	@Value("${authentication.jwt.expiration}")
+	private Integer expirationTime;
+
+	@Value("${authentication.jwt.key}")
+	private String key;
+
+	@Value("${authentication.jwt.prefix}")
+	private String tokenPrefix;
 
 	public Token generate(User user) {
 		Map<String, Object> maps = new HashMap<>();
