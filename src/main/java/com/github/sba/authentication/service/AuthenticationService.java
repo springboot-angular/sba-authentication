@@ -1,7 +1,9 @@
 package com.github.sba.authentication.service;
 
+import com.github.sba.authentication.Token;
+
 public interface AuthenticationService {
 
-	String authenticate(String login, String password);
+	Token authenticate(String login, String password);
 
 }

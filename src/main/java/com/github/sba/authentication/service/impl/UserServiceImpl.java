@@ -44,6 +44,9 @@ public class UserServiceImpl implements UserService {
 	@Transactional(readOnly = true)
 	@Override
 	public User get(String email) {
+		if (email == null)
+			throw new UserInvalidFieldException("Email obrigatório");
+
 		QUser qUser = QUser.user;
 		BooleanExpression expression = qUser.email.eq((String) email).and(qUser.active.isTrue());
 		User user = userRepository.findOne(expression);
