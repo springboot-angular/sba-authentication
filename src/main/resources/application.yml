@@ -1,0 +1,39 @@
+spring:
+  profiles: dev
+  jpa:
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      hibernate.show_sql: true
+  datasource:
+          url: jdbc:h2:mem:autdb 
+          username: sa
+          password:
+          driver-class-name: org.h2.Driver
+          
+server.port: 8090          
+          
+---
+spring:
+  profiles: prod
+  jpa:
+    show-sql: false
+    properties:
+      hibernate.format_sql: false
+      hibernate.show_sql: false
+      hibernate.default_schema: DEFAULT 
+  datasource:
+          url: jdbc:h2:mem:autdb    
+          username: sa
+          password:
+          driver-class-name: org.h2.Driver           
+      
+---  
+ spring:
+  profiles: junit
+  jpa:
+    show-sql: false
+    properties:
+      hibernate.format_sql: false
+      hibernate.show_sql: false
+      
