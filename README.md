@@ -27,8 +27,8 @@ Executar o comando:
 ```
 mvn spring-boot:run
 ```
+## Chamando o serviço de autenticação
 
-Chamando o serviço de autenticação.
 Via POST chamar o link:
 
 ```
