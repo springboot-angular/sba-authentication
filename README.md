@@ -31,6 +31,7 @@ mvn spring-boot:run
 ## Descrição dos Serviços
 
 ### 1 - Login
+Serviço responsável por autenticar o usuário e gerar um token, com esse token será possível consumir os outros serviços da aplicação.
 
 Via POST chamar o link:
 
