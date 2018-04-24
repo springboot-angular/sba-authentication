@@ -20,14 +20,14 @@ Executar o comando abaixo
 mvn clean install 
 ```
 
-## Iniciando a Aplicação
+### Iniciando a Aplicação
 
 Executar o comando:
 
 ```
 mvn spring-boot:run
 ```
-## Chamando o serviço de autenticação
+### Chamando o serviço de autenticação
 
 Via POST chamar o link:
 
@@ -44,6 +44,6 @@ No Header da requisição enviar o JSON
 }
 ```
 
-## Autor
+### Autor
 
 * **Alexandre Martins Garcia** - martinsgarcia@gmail.com
