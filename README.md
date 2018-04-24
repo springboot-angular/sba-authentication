@@ -31,7 +31,3 @@ mvn spring-boot:run
 ## Autor
 
 * **Alexandre Martins Garcia** - martinsgarcia@gmail.com
-
-## License
-
-Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter detalhes
