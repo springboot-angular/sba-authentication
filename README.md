@@ -28,6 +28,22 @@ Executar o comando:
 mvn spring-boot:run
 ```
 
+Chamando o serviço de autenticação.
+Via POST chamar o link:
+
+```
+http://localhost:8090/authentication
+```
+
+No Header da requisição enviar o JSON
+
+```
+{
+"email":"martinsgarcia@gmail.com",
+"password":"teste123456"
+}
+```
+
 ## Autor
 
 * **Alexandre Martins Garcia** - martinsgarcia@gmail.com
