@@ -8,8 +8,8 @@ Esse projeto gerencia a parte de login do usuário, você passa o usuário e sen
 O que você precisa para instalar.
 
 ```
-Java >=8
-Maven >=3.3.9
+Jdk >=8
+Apache maven >=3.3.9
 ```
 
 ### Instalação
@@ -30,7 +30,7 @@ mvn spring-boot:run
 
 ## Autor
 
-* **Alexandre Martins Garica** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Alexandre Martins Garica** - martinsgarcia@gmail.com
 
 ## License
 
