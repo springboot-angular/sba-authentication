@@ -30,7 +30,7 @@ mvn spring-boot:run
 
 ## Descrição dos Serviços
 
-### Chamando o serviço de autenticação
+### 1 - Login
 
 Via POST chamar o link:
 
@@ -46,6 +46,15 @@ No Header da requisição enviar o JSON
 "password":"teste123456"
 }
 ```
+
+O resultado dessa requisição sera um token
+```
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJuYW1lIjoiQWxleGFuZHJlIE1hcnRpbnMgR2FyY2lhIiwiZXhwIjoxNTI0NTc0NjE3LCJlbWFpbCI6Im1hcnRpbnNnYXJjaWFAZ21haWwuY29tIn0.UXhhbCD3NRM22-BCXnnhGaIWQIFUgqDbLF8RhtVIQgkEGPJwp21olQHu69VB_qVSsI76v0yTtDKDusfym3skgg"
+}
+```
+
+Esse token deverá ser enviado no Header das requisições dos outros serviços
 
 ### Autor
 
