@@ -54,6 +54,14 @@ Caso a autenticação não for bem sucedida a aplicação irá retornar uma exe�
 
 ![alt text](https://github.com/springboot-angular/imagens/blob/master/login3.png)
 
+### 3 - Buscar Usuários
+Serviço responsável por criar buscar todos os usuários cadastrados na aplicação.
+Para fazer a requisição é necessário passar o link abaixo e no header informar o token gerado no serviço de Login
+
+Via GET chamar o link:
+
+![alt text](https://github.com/springboot-angular/imagens/blob/master/login5.png)
+
 
 
 ### Autor
