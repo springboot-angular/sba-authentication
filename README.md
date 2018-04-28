@@ -35,19 +35,13 @@ Serviço responsável por criar um usuário na base embedded da aplicação, com
 
 Via POST chamar o link:
 
-![alt text](https://github.com/springboot-angular/imagens/blob/master/login2.png)
+![alt text](https://github.com/springboot-angular/imagens/blob/master/login4.png)
 
 
 ### 2 - Login
 Serviço responsável por autenticar o usuário e gerar um token, com esse token será possível consumir os outros serviços da aplicação.
 
 Via POST chamar o link:
-
-```
-http://localhost:8090/authentication
-```
-
-No Header da requisição enviar o JSON:
 
 ![alt text](https://github.com/springboot-angular/imagens/blob/master/login1.png)
 
