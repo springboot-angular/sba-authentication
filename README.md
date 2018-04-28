@@ -41,12 +41,7 @@ http://localhost:8090/authentication
 
 No Header da requisição enviar o JSON:
 
-```
-{
-"email":"martinsgarcia@gmail.com",
-"password":"teste123456"
-}
-```
+![alt text](https://github.com/springboot-angular/imagens/blob/master/login1.png)
 
 O resultado dessa requisição será um token:
 ```
