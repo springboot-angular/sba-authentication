@@ -30,7 +30,15 @@ mvn spring-boot:run
 
 ## Descrição dos Serviços
 
-### 1 - Login
+### 1 - Criação do Usuário
+Serviço responsável por criar um usuário na base embedded da aplicação, com isso será possível fazer o login da aplicação no próximo serviço.
+
+Via POST chamar o link:
+
+![alt text](https://github.com/springboot-angular/imagens/blob/master/login2.png)
+
+
+### 2 - Login
 Serviço responsável por autenticar o usuário e gerar um token, com esse token será possível consumir os outros serviços da aplicação.
 
 Via POST chamar o link:
@@ -43,14 +51,16 @@ No Header da requisição enviar o JSON:
 
 ![alt text](https://github.com/springboot-angular/imagens/blob/master/login1.png)
 
-O resultado dessa requisição será um token:
-```
-{
-    "token": "eyJhbGciOiJIUzUxMiJ9.eyJuYW1lIjoiQWxleGFuZHJlIE1hcnRpbnMgR2FyY2lhIiwiZXhwIjoxNTI0NTc0NjE3LCJlbWFpbCI6Im1hcnRpbnNnYXJjaWFAZ21haWwuY29tIn0.UXhhbCD3NRM22-BCXnnhGaIWQIFUgqDbLF8RhtVIQgkEGPJwp21olQHu69VB_qVSsI76v0yTtDKDusfym3skgg"
-}
-```
+Se a autenticação for bem sucedida o sistema irá retornar o token no header da requisição:
 
+![alt text](https://github.com/springboot-angular/imagens/blob/master/login2.png)
 Esse token deverá ser enviado no Header das requisições dos outros serviços.
+
+Caso a autenticação não for bem sucedida a aplicação irá retornar uma exeção:
+
+![alt text](https://github.com/springboot-angular/imagens/blob/master/login3.png)
+
+
 
 ### Autor
 
