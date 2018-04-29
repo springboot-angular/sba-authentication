@@ -60,7 +60,7 @@ Para fazer a requisição é necessário passar o link abaixo e no header inform
 
 Via GET chamar o link:
 
-![alt text](https://github.com/springboot-angular/imagens/blob/master/login5.png)
+![alt text](https://github.com/springboot-angular/imagens/blob/master/get-all-users.png)
 
 
 
