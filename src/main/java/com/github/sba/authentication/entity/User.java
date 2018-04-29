@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "USER")
 public class User implements Serializable {
@@ -18,6 +20,7 @@ public class User implements Serializable {
 	@Column(name = "EMAIL")
 	private String email;
 
+	@JsonIgnore
 	@Column(name = "PASSWORD")
 	private String password;
 

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.github.sba.authentication.bean.UserBean;
 import com.github.sba.authentication.entity.User;
 import com.github.sba.authentication.service.UserService;
 
@@ -17,8 +18,8 @@ public class RegisterUserController {
 	private UserService userService;
 
 	@RequestMapping(method = RequestMethod.POST)
-	public User create(@RequestBody User user) {
-		return userService.create(user);
+	public User create(@RequestBody UserBean userBean) {
+		return userService.create(userBean);
 	}
 
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.github.sba.authentication.bean.UserBean;
 import com.github.sba.authentication.entity.User;
 import com.github.sba.authentication.service.UserService;
 
@@ -24,14 +25,19 @@ public class UserController {
 		return userService.getAll(pageable);
 	}
 
+	@RequestMapping(value = "/{email}", method = RequestMethod.GET)
+	public User get(@PathVariable(name = "email") String email, Pageable pageable) {
+		return userService.get(email);
+	}
+
 	@RequestMapping(method = RequestMethod.PUT)
-	public User update(@RequestBody User user) {
+	public User update(@RequestBody UserBean user) {
 		return userService.update(user);
 	}
 
-	@RequestMapping(value = "/{email}", method = RequestMethod.DELETE)
-	public User remove(@PathVariable(name = "email") String email, @RequestBody User user) {
-		return userService.remove(email);
+	@RequestMapping(method = RequestMethod.DELETE)
+	public User remove(@RequestBody UserBean user) {
+		return userService.remove(user.getEmail());
 	}
 
 }

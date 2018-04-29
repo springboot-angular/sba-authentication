@@ -3,20 +3,18 @@ package com.github.sba.authentication.crud;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.github.sba.authentication.entity.User;
-
-public interface BaseCrud<T, P> {
+public interface BaseCrud<T, P1, P2> {
 
 	Page<T> getAll(Pageable pageable);
 
-	T get(P id);
+	T get(P2 id);
 
-	void requiredFields(User user);
+	void requiredFields(P1 user);
 
-	T create(T object);
+	T create(P1 object);
 
-	T update(T object);
+	T update(P1 object);
 
-	T remove(P id);
+	T remove(P2 id);
 
 }

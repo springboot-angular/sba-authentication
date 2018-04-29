@@ -12,7 +12,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @DataJpaTest
 @SpringBootTest
-@ComponentScan(basePackages = { "com.github.sba.authentication.**.service.*" })
+@ComponentScan(basePackages = { "com.github.sba.authentication.**.service.*",
+		"com.github.sba.authentication.security" })
 @EnableConfigurationProperties
 @ActiveProfiles(profiles = "junit")
 public class SbaAuthenticationApplicationTests {
