@@ -1,13 +1,16 @@
 package com.github.sba.authentication.security;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -37,7 +40,10 @@ public class TokenAuthenticationService {
 					.getSubject();
 
 			if (user != null) {
-				return new UsernamePasswordAuthenticationToken(user, null, Collections.emptyList());
+				List<GrantedAuthority> authorities = new ArrayList<>();
+				authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+				
+				return new UsernamePasswordAuthenticationToken(user, null, authorities);
 			}
 		}
 		return null;
